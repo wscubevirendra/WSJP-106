@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+.container {
+    width: 1200px;
+    padding: 10px;
+    /* border: 2px solid red; */
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.header-right {
+    display: flex;
+    gap: 8px;
+}
+
+.chatBtn {
+    border-radius: 8px;
+    border: 1px solid #27AE60;
+    padding: 10px 18px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0px 1px 2px 0px #1018280D;
+    color: #27AE60;
+    font-size: 16px;
+}
+
+.callBtn {
+    border-radius: 8px;
+    border: none;
+    padding: 10px 18px;
+    font-weight: 500;
+    color: #FFFFFF;
+    background: linear-gradient(to left, #0ACEFE, #2699FB);
+}
+
+.top-section {
+    width: 1200px;
+    border: 2px solid red;
+    padding: 10px;
+    margin: auto;
+    display: flex;
+
+}
+
+.top-section-left {
+    width: 50%;
+    border: 2px solid green;
+}
+
+.top-section-left h1 {
+    font-weight: 700;
+    font-size: 52px;
+    line-height: 68px;
+}
+
+.top-section-left h1 span {
+    color: #2699FB;
+    background-image: url("../images/Vector\ 63\ \(3\).png");
+    background-repeat: no-repeat;
+    background-position: bottom center;
+
+}
+
+.top-section-right {
+    width: 50%;
+    border: 2px solid blue;
+
+}

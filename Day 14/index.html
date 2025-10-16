@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 25px;
+        }
+
+        .card {
+            width: calc(25% - 25px);
+            height: 300px;
+
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container"></div>
+
+
+    <script>
+        var container = document.querySelector(".container")
+        async function getData() {
+            var response = await fetch("https://dummyjson.com/recipes");
+            var data = await response.json()
+            showRecipe(data.recipes)
+        }
+
+
+        function showRecipe(recipes) {
+            for (var data of recipes) {
+                console.log(data)
+                var divElm = document.createElement('div')
+                divElm.innerHTML = `<img src=${data.image} width="100%" height="100%" alt="">
+            <h5>${data.name}</h5>`
+                divElm.classList.add('card')
+                container.appendChild(divElm)
+            }
+
+        }
+
+        getData();
+
+    </script>
+
+</body>
+
+</html>

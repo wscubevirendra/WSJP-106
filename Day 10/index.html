@@ -1,0 +1,67 @@
+<script>
+    // var array = [10, 2, 4, 3, 2, 2, 4, 5];
+    // var findElement = 100;
+    // var count = 0
+    // for (var i = 0; i < array.length; i++) {
+    //     if (array[i] === findElement) {
+    //         count++
+    //     }
+    // }
+
+    // console.log(count)
+
+    // var indianActors = ["Shah Rukh Khan", "Salman Khan", "Amitabh Bachchan", "Aamir Khan", "Akshay Kumar", "Hrithik Roshan"];
+
+    // var findActor = "Akshay Kumar";
+    // var TopActror = false;
+
+    // for (var i = 0; i < indianActors.length; i++) {
+    //     if (indianActors[i] === findActor) {
+    //         TopActror = true
+    //     }
+    // }
+
+    // if(TopActror){
+    //     console.log("Yes in this list")
+    // }else{
+    //     console.log("No")
+    // }
+
+
+    //  Write a program to check if all elements in a numeric array are positive.
+
+    // var array = [1, 20, 30, 20];
+    // var isPosi = true;
+
+    // for (var i = 0; i < array.length; i++) {
+    //     if (array[i] < 0) {
+    //         isPosi = false
+    //     }
+    // }
+
+    // if (isPosi) {
+    //     console.log("All elements is positive")
+    // } else {
+    //     console.log("not pos")
+    // }
+
+    var array = ["Hello", "Hi", 100, 200, "WsCube Tech", true];
+    var stringArray = [];
+    var numberArray = [];
+
+    console.log(typeof array[3])
+
+    for (var i = 0; i < array.length; i++) {
+        if (typeof (array[i]) == "string") {
+            stringArray.push(array[i])
+        } else if (typeof (array[i]) === "number") {
+            numberArray.push(array[i])
+        }
+    }
+
+    console.log(stringArray)
+    console.log(numberArray)
+
+
+
+</script>

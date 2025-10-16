@@ -1,0 +1,23 @@
+@media (min-width:0px) and (max-width:990px) {
+    header ul {
+        width: 200px;
+        height: 100vh;
+        z-index: 998;
+        background: rgba(0, 0, 0, 0.8);
+        position: fixed;
+        top: 0;
+        left: -100%;
+        flex-direction: column;
+        padding: 20px;
+        gap: 30px;
+        transition: 0.6s;
+    }
+
+    header ul li {
+        color: white;
+    }
+
+    #toggleBtn {
+        display: block;
+    }
+}

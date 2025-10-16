@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <STYle>
+        .product-card {
+  width: 300px;
+  font-family: Arial, sans-serif;
+  border: 1px solid #eee;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  cursor: pointer;
+}
+
+.product-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.product-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.product-image img {
+  width: 100%;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.product-card:hover img {
+  transform: scale(1.1);
+}
+
+.add-to-bag {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #ff3f6c;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.product-card:hover .add-to-bag {
+  opacity: 1;
+}
+
+.product-details {
+  padding: 10px;
+}
+
+.product-details h3 {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.product-details p {
+  margin: 5px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.product-details span {
+  font-weight: bold;
+  color: #333;
+}
+
+    </STYle>
+</head>
+<body>
+    
+</body><div class="product-card">
+  <div class="product-image">
+    <img src="https://via.placeholder.com/300x400" alt="Product" />
+    <button class="add-to-bag">Add to Bag</button>
+  </div>
+  <div class="product-details">
+    <h3>Roadster</h3>
+    <p>Men Black Solid Shirt</p>
+    <span>₹799</span>
+  </div>
+</div>
+
+</html>

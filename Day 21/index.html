@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        header {
+            width: 100%;
+            height: 82px;
+            box-shadow: inset 0 0 0 2000px rgba(0, 0, 0, 0.5);
+        }
+
+        h4 {
+            color: white;
+            text-align: center;
+            line-height: 82px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+    </style>
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
+    <!-- Add the slick-theme.css if you want default styling -->
+    <link rel="stylesheet" type="text/css"
+        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+</head>
+
+<body>
+    <header>
+        <h4>WsCube Tech</h4>
+    </header>
+    <div class="responsive">
+        <div class="box">
+            1. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat animi dolorem a modi minus ut commodi
+            distinctio quis illo perspiciatis officia sit molestias sunt laudantium, rem dignissimos totam praesentium
+            necessitatibus!
+        </div>
+        <div class="box">
+            2. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat animi dolorem a modi minus ut commodi
+            distinctio quis illo perspiciatis officia sit molestias sunt laudantium, rem dignissimos totam praesentium
+            necessitatibus!
+        </div>
+        <div class="box">
+            3. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat animi dolorem a modi minus ut commodi
+            distinctio quis illo perspiciatis officia sit molestias sunt laudantium, rem dignissimos totam praesentium
+            necessitatibus!
+        </div>
+        <div class="box">
+            4. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat animi dolorem a modi minus ut commodi
+            distinctio quis illo perspiciatis officia sit molestias sunt laudantium, rem dignissimos totam praesentium
+            necessitatibus!
+        </div>
+        <div class="box">
+            5. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat animi dolorem a modi minus ut commodi
+            distinctio quis illo perspiciatis officia sit molestias sunt laudantium, rem dignissimos totam praesentium
+            necessitatibus!
+        </div>
+        <div class="box">
+            6. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat animi dolorem a modi minus ut commodi
+            distinctio quis illo perspiciatis officia sit molestias sunt laudantium, rem dignissimos totam praesentium
+            necessitatibus!
+        </div>
+        <div class="box">
+            7. Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat animi dolorem a modi minus ut commodi
+            distinctio quis illo perspiciatis officia sit molestias sunt laudantium, rem dignissimos totam praesentium
+            necessitatibus!
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"
+        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+    <script>
+        $('.responsive').slick({
+            dots: true,
+            infinite: true,
+            speed: 300,
+            slidesToShow: 4,
+            autoplay: true,
+            autoplaySpeed: 2000,
+            slidesToScroll: 1,
+            responsive: [
+                {
+                    breakpoint: 1024,
+                    settings: {
+                        slidesToShow: 3,
+                        slidesToScroll: 3,
+                        infinite: true,
+                        dots: true
+                    }
+                },
+                {
+                    breakpoint: 600,
+                    settings: {
+                        slidesToShow: 2,
+                        slidesToScroll: 2
+                    }
+                },
+                {
+                    breakpoint: 480,
+                    settings: {
+                        slidesToShow: 1,
+                        slidesToScroll: 1
+                    }
+                }
+                // You can unslick at a given breakpoint now by adding:
+                // settings: "unslick"
+                // instead of a settings object
+            ]
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container {
+            width: 1000px;
+            height: 300px;
+            margin: 50px auto;
+            /* border: 2px solid red; */
+            display: flex;
+            justify-content: space-around;
+        }
+
+        #box {
+            width: 200px;
+            height: 200px;
+            background-color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <div id="box">1</div>
+
+
+    </div>
+    <input type="text" id="inp" placeholder="Enter Your Name">
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            //Mutiple event  in single element
+            $("#box").on({
+                mouseenter: function () {
+                    $(this).css("background-color", "red");
+                },
+                mouseleave: function () {
+                    $(this).css("background-color", "green");
+                },
+                click: function () {
+                    $(this).css("background-color", "blue");
+                },
+                dblclick: function () {
+                    $(this).css("background-color", "yellow");
+                }
+
+            });
+
+        });
+        //Key event
+        $("#inp").on({
+            keydown: function () {
+                $(this).css("background-color", "red");
+            },
+            keyup: function () {
+                $(this).css("background-color", "green");
+            },
+          
+        });
+
+
+
+
+    </script>
+</body>
+
+</html>

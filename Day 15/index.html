@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: black;
+        }
+
+        .top_input {
+            width: 700px;
+            margin: 20px auto;
+        }
+
+        .top_input input {
+            width: 100%;
+            padding: 10px;
+            border-radius: 20px;
+            border: none;
+            outline: none;
+            font-size: 18px;
+        }
+
+        .row {
+            width: 1200px;
+            height: 500px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+
+            /* border: 2px solid red; */
+        }
+
+        .card {
+            width: calc(25% - 20px);
+            height: 350px;
+            box-shadow: 1px 1px 6px 2px white;
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .overview {
+            width: 100%;
+            padding: 2px;
+            background-color: white;
+            padding: 4px;
+            position: absolute;
+            bottom: -100%;
+            left: 0;
+            transition: 0.6s;
+        }
+
+        .card:hover .overview {
+            bottom: 0px;
+        }
+
+        .overview h3 {
+            margin: 10px 0px;
+        }
+
+        .overview p {
+            margin-top: 10px;
+        }
+
+        .card button {
+            padding: 4px 10px;
+            background-color: green;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            border: none;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="top_input">
+        <input id="inp" type="text">
+    </div>
+    <div class="row"></div>
+
+    <script>
+        var row = document.querySelector(".row")
+        var inp = document.querySelector("#inp")
+        var TOPMOVIEAPIURL = "https://api.themoviedb.org/3/discover/movie?sort_by=popularity.desc&api_key=04c35731a5ee918f014970082a0088b1&page=1";
+        var SEARCHAPI =
+            "https://api.themoviedb.org/3/search/movie?&api_key=04c35731a5ee918f014970082a0088b1&query=";
+
+
+        async function getMovies(API) {
+            console.log(API)
+            var response = await fetch(API)
+            var data = await response.json()
+            showMovies(data.results)
+        }
+
+        getMovies(TOPMOVIEAPIURL)
+
+
+        function showMovies(movies) {
+            row.innerHTML = ""
+            for (data of movies) {
+                var box = document.createElement('div');
+                box.classList.add("card");
+                box.innerHTML = ` <img src=${`https://image.tmdb.org/t/p/w1280/${data.poster_path}`} width="100%" height="100%"
+                alt = "" >
+            <div class="overview">
+                <h3>${data.title}</h3>
+                <b>Overview:</b>
+                <p>
+                ${data.overview}
+                </p>
+
+
+            </div>
+            <button>${data.vote_average}</button>`
+
+                row.appendChild(box)
+
+            }
+        }
+
+
+        inp.addEventListener(
+            'keyup',
+            function (e) {
+                if (e.target.value == "") {
+                    getMovies(TOPMOVIEAPIURL)
+
+                } else {
+                    getMovies(SEARCHAPI + e.target.value)
+
+                }
+            }
+        )
+
+
+    </script>
+
+</body>
+
+</html>

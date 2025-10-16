@@ -1,0 +1,12 @@
+.mycard{
+  display: flex;
+  box-shadow: 2px 2px 2px 1px gray;
+  padding: 20px;
+  justify-content: space-around;
+
+}
+
+button{
+  padding: 10px;
+  border: 1px solid green;
+}

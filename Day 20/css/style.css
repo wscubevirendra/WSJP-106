@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+* {
+    font-family: "Inter", sans-serif;
+
+}
+
+.mynav .nav-link {
+    color: #475467 !important;
+    font-weight: 500;
+}
+
+.mynav input {
+    color: #667085;
+}
+
+.mynav form{
+    min-width: 275px;
+}
+
+.mynav form i {
+
+    top: 30%;
+    right: 20px;
+}
+
+.top-container h1{
+    font-size: 60px;
+    line-height: 72px;
+    font-weight: bold;
+}

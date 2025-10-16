@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        .container-fluid {
+            width: 100%;
+            padding: 10px;
+            background-color: aqua;
+
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .card {
+            /* width: calc(25% - 10px); */
+            flex: 1 1 calc(25% - 10px);
+            padding: 10px;
+            background-color: teal;
+            color: white;
+        }
+
+        @media (min-width:0px) and (max-width:576px) {
+            .card {
+                /* width: calc(100% - 10px); */
+                flex: 1 1 calc(100% - 10px);
+
+                padding: 4px;
+                background-color: firebrick;
+
+            }
+        }
+
+        @media (min-width:576px) and (max-width:748px) {
+            .card {
+                /* width: calc(50% - 10px); */
+                flex: 1 1 calc(50% - 10px);
+
+                padding: 6px;
+                background-color: chartreuse;
+
+            }
+        }
+
+        @media (min-width:748px) and (max-width:992px) {
+            .card {
+                /* width: calc(33% - 10px); */
+                flex: 1 1 calc(33% - 10px);
+
+                padding: 8px;
+                background-color: darkorange;
+
+
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="container">
+            <div class="card"> 1.Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime maiores animi sed,
+                alias
+                quas tempore delectus velit, perspiciatis pariatur quasi eum? Esse nisi odio sapiente iste, sed nulla
+                maiores dolorum!</div>
+            <div class="card">2.Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime maiores animi sed, alias
+                quas tempore delectus velit, perspiciatis pariatur quasi eum? Esse nisi odio sapiente iste, sed nulla
+                maiores dolorum!</div>
+            <div class="card">3.Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime maiores animi sed, alias
+                quas tempore delectus velit, perspiciatis pariatur quasi eum? Esse nisi odio sapiente iste, sed nulla
+                maiores dolorum!</div>
+            <div class="card">4.Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime maiores animi sed, alias
+                quas tempore delectus velit, perspiciatis pariatur quasi eum? Esse nisi odio sapiente iste, sed nulla
+                maiores dolorum!</div>
+            <div class="card">5.Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime maiores animi sed, alias
+                quas tempore delectus velit, perspiciatis pariatur quasi eum? Esse nisi odio sapiente iste, sed nulla
+                maiores dolorum!</div>
+            <div class="card">6.Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime maiores animi sed, alias
+                quas tempore delectus velit, perspiciatis pariatur quasi eum? Esse nisi odio sapiente iste, sed nulla
+                maiores dolorum!</div>
+            <div class="card">7.Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime maiores animi sed, alias
+                quas tempore delectus velit, perspiciatis pariatur quasi eum? Esse nisi odio sapiente iste, sed nulla
+                maiores dolorum!</div>
+            <!-- <div class="card">8.Lorem ipsum dolor sit amet consectetur adipisicing elit. Maxime maiores animi sed, alias
+                quas tempore delectus velit, perspiciatis pariatur quasi eum? Esse nisi odio sapiente iste, sed nulla
+                maiores dolorum!</div> -->
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>
